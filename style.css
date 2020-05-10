@@ -48,11 +48,10 @@ main {
     flex-direction: column;
     height: 100%;
 }
-
+/* The last icon should be pushed down */
 .nav-item:last-child {
     margin-top: auto;
 }
-
 .nav-link {
     display: flex;
     align-items: center;
@@ -69,7 +68,7 @@ main {
     color: var(--text-secondary);
 }
 
-/* Link texts should not be display when navbar is folded */
+/* Link texts should not be displayed when navbar is folded */
 .link-text {
     display: none;
     margin-left: 1rem;
@@ -79,7 +78,7 @@ main {
     margin: 0 1.5rem;
 }
 
-/* This 'expands' th navbar */
+/* This 'expands' the navbar */
 .navbar:hover {
     width: 16rem;
 }
@@ -96,4 +95,34 @@ main {
 
 .fa-primary, .fa-secondary {
     transition: var(--transition-speed);
+}
+
+.logo {
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: var(--text-secondary);
+    background: var(--bg-secondary);
+    letter-spacing: 0.3ch;
+    width: 100%;
+
+}
+
+.logo svg {
+    transform: rotate(0deg);
+    transition: transform var(--transition-speed);
+}
+.navbar:hover .logo svg {
+    transform: rotate(-180deg)
+}
+
+/* small screens */
+@media only screen and (max-width: 600px) {
+
+}
+
+/* Large screens */
+@media only screen and (min-width: 600px) {
+
 }
